@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 	return (
 		<React.Fragment>
 			<Head>
-				<title>Nextjs-Dev Blog</title>
+				<title>Nextjs - Quran</title>
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preload" href="/fonts/Quran/quran.ttf" as="font" crossOrigin="" />
 			</Head>
