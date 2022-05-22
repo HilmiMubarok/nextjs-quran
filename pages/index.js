@@ -4,11 +4,9 @@ import Link from 'next/link';
 
 export async function getServerSideProps({ req, res }) {
 	res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
-	// Fetch data from external API
 	const result = await fetch(`https://api.quran.sutanlab.id/surah`);
 	const surahs = await result.json();
 
-	// Pass surahs to the page via props
 	return { props: { surahs } };
 }
 

@@ -6,19 +6,20 @@ export async function getServerSideProps(context) {
 	const { id } = context.query;
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
-	// Fetch data from external API
 	const result = await fetch(`https://api.quran.sutanlab.id/surah/${id}`);
 	const surah = await result.json();
 
-	// Pass surah to the page via props
 	return { props: { surah } };
 }
 
 const Surah = ({ surah }) => {
 	const router = useRouter();
 
-	// get surah by id
 	const data = surah.data;
+
+	// TODO
+	// Play audio
+	// Show translation each verse
 
 	return (
 		<Layout>
