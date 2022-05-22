@@ -4,6 +4,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
-* {
-	font-family: 'Plus Jakarta Sans', sans-serif;
+@font-face {
+	font-family: "Quran";
+	src: url("/fonts/Quran/quran.ttf");
+}
+
+.quran {
+	font-family: 'Quran';
+}
+
+@layer base {
+	body {
+		@apply bg-gray-50 text-gray-900 dark:bg-[#1E0771] dark:text-gray-100;
+		@apply min-h-screen;
+	}
+
+	::selection {
+		@apply text-white bg-indigo-500;
+	}
+
+	.btn {
+		@apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap;
+	}
 }
